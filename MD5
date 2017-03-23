@@ -1,0 +1,11 @@
+8a5f3da594c90350c70a56e7753a3f39 *DESCRIPTION
+327496f6466350f6347a8f00d3ef4a2a *NAMESPACE
+ded80f1c577f67855931ed34d03d2052 *R/summariser.R
+f193eb943cb5f6ec328a83299209ff76 *R/summary_plot.R
+d6c4d2b419a0a71a51699ebcc7b09008 *R/summary_stats.R
+88ab5d5d2ccac9074a2c772a6d79e307 *R/summary_stats.t.R
+097c54b8f1b9ea5656425e20fbe70801 *inst/CITATION
+0f01e02f980f5f678794a29abbebb469 *man/summariser.Rd
+3baad2847bdd2179c759a01fcc113bca *man/summary_plot.Rd
+163f68aa62a1b7095269c7d0de0b3b81 *man/summary_stats.Rd
+d02a5082941debc657b585b0d2b5c152 *man/summary_stats.t.Rd
