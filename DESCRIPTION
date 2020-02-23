@@ -1,23 +1,22 @@
 Package: summariser
 Type: Package
 Title: Easy Calculation and Visualisation of Confidence Intervals
-Version: 0.1.0
+Version: 2.0.0
 Authors@R: person("Conor", "Neilson", email="condwanaland@gmail.com", role=
     c("aut", "cre"))
 Maintainer: Conor Neilson <condwanaland@gmail.com>
 Description: Functions to speed up the exploratory analysis of simple
-    datasets using 'dplyr' and 'ggplot2'. Functions are provided to do the 
-    common tasks of calculating confidence intervals and visualising the 
-    results. 
+    datasets using 'dplyr'. Functions are provided to do the 
+    common tasks of calculating confidence intervals.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: dplyr, ggplot2, lazyeval, plotrix
-Suggests: testthat
-RoxygenNote: 6.0.1
+Imports: dplyr, rlang
+Suggests: testthat, covr
+RoxygenNote: 7.0.2
 URL: https://github.com/condwanaland/summariser
 NeedsCompilation: no
-Packaged: 2017-03-23 07:25:21 UTC; apple
+Packaged: 2020-02-23 17:36:49 UTC; apple
 Author: Conor Neilson [aut, cre]
 Repository: CRAN
-Date/Publication: 2017-03-23 13:10:18 UTC
+Date/Publication: 2020-02-23 17:50:03 UTC

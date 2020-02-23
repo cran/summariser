@@ -4,7 +4,7 @@
 \alias{summary_stats}
 \title{Calculate summary statistics on a data frame}
 \usage{
-summary_stats(data, measure, ...)
+summary_stats(data, measure, type)
 }
 \arguments{
 \item{data}{a data frame}
@@ -12,9 +12,8 @@ summary_stats(data, measure, ...)
 \item{measure}{a numeric variable. Response variable - summary statistics
 will be returned for this variable}
 
-\item{...}{a factor variable, or group of factor variables.  Data frame
-will be grouped by this variable, and summary statistics will be produced
-for each group}
+\item{type}{a string variable. Controls whether a normal or t distribution is used for CI
+calculation. Defaults to "norm".}
 }
 \description{
 Functions from dplyr are used to automate the process of
@@ -25,7 +24,8 @@ Functions from dplyr are used to automate the process of
  from a t-distribution (summary_stats.t)
 }
 \examples{
-data(iris)
-  summary_stats(iris, measure = "Sepal.Length")
-  summary_stats(iris, measure = "Sepal.Length", Species)
+library(summariser)
+library(dplyr)
+iris \%>\%
+  summary_stats(Sepal.Length)
 }

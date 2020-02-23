@@ -9,25 +9,31 @@
 #' @param data a data frame
 #' @param measure a numeric variable. Response variable - summary statistics
 #'   will be returned for this variable
-#' @param ... a factor variable, or group of factor variables.  Data frame
-#'   will be grouped by this variable, and summary statistics will be produced
-#'   for each group
+#' @param type a string variable. Controls whether a normal or t distribution is used for CI
+#'   calculation. Defaults to "norm".
+
 #' @export
-#' @import ggplot2
-#' @import dplyr
-#' @import plotrix
-#' @import lazyeval
-#' @examples data(iris)
-#'   summary_stats(iris, measure = "Sepal.Length")
-#'   summary_stats(iris, measure = "Sepal.Length", Species)
-
-
-summary_stats <- function(data, measure, ...) {
-  data %>% group_by_(.dots = lazyeval::lazy_dots(...)) %>%
-    summarise_(mean = interp(~mean(x), x= as.name(measure)),
-               sd = interp(~sd(x), x = as.name(measure)),
-               N = interp(~length(x), x = as.name(measure)),
-               se = interp(~plotrix::std.error(x), x=as.name(measure)),
-               ci = interp(~plotrix::std.error(x)*qnorm(0.975), x=as.name(measure)))
+#' @examples
+#' library(summariser)
+#' library(dplyr)
+#' iris %>%
+#'   summary_stats(Sepal.Length)
+summary_stats <- function(data, measure, type){
+  UseMethod("summary_stats")
 }
 
+
+#' @export
+summary_stats.default <- function(data, measure, type){
+  print("Sorry, summary_stats only provides methods for class 'data.frame' and 'grouped_df'")
+}
+
+
+#' @export
+summary_stats.data.frame <- function(data, measure, type){
+  measure_var <- dplyr::enquo(measure)
+
+  dat <- summary_impl(data, measure_var, type)
+
+  return(dat)
+}
