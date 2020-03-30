@@ -1,7 +1,7 @@
 Package: summariser
 Type: Package
 Title: Easy Calculation and Visualisation of Confidence Intervals
-Version: 2.0.0
+Version: 2.3.0
 Authors@R: person("Conor", "Neilson", email="condwanaland@gmail.com", role=
     c("aut", "cre"))
 Maintainer: Conor Neilson <condwanaland@gmail.com>
@@ -11,12 +11,12 @@ Description: Functions to speed up the exploratory analysis of simple
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr, rlang
+Imports: dplyr
 Suggests: testthat, covr
 RoxygenNote: 7.0.2
 URL: https://github.com/condwanaland/summariser
 NeedsCompilation: no
-Packaged: 2020-02-23 17:36:49 UTC; apple
+Packaged: 2020-03-30 00:36:29 UTC; apple
 Author: Conor Neilson [aut, cre]
 Repository: CRAN
-Date/Publication: 2020-02-23 17:50:03 UTC
+Date/Publication: 2020-03-30 09:00:02 UTC

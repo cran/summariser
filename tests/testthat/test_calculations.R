@@ -1,6 +1,7 @@
 context("Testing that correct numbers are returned")
 library(dplyr)
 
+
 ungrouped_df <- readRDS(system.file("extdata",
                                           "ungrouped_iris.rds",
                                           package = "summariser"))
@@ -25,6 +26,7 @@ pkg_group_df <- iris %>%
   summary_stats(Sepal.Length)
 
 test_that("Grouped dfs are correctly calculated", {
+  skip_on_cran()
   expect_equivalent(group_df[, 1], pkg_group_df[, 1])
   expect_equivalent(group_df[, 2], pkg_group_df[, 2])
   expect_equivalent(group_df[, 4], pkg_group_df[, 4])
@@ -40,9 +42,12 @@ triple_grouped_df <- readRDS(system.file("extdata",
                                           "triple_grouped_mtcars.rds",
                                           package = "summariser"))
 
+triple_grouped_df <- ungroup(triple_grouped_df)
+
 pkg_triple_grouped_df <- mtcars %>%
   group_by(am, gear, carb) %>%
-  summary_stats(hp)
+  summary_stats(hp) %>%
+  ungroup()
 
 test_that("Three levels of grouping calculates correctly", {
   expect_equivalent(triple_grouped_df[, 1], pkg_triple_grouped_df[, 1])

@@ -1,6 +1,6 @@
-c865d3fecbc8e98fa5eb8f32dfdaca1a *DESCRIPTION
+1b055c473414bd3900a5ebb058c19434 *DESCRIPTION
 20402750871588b1c23ac5b6920b4418 *NAMESPACE
-9c602e90835182237c3e7782e69d0970 *NEWS.md
+3c08c34e7c4f7ae18fac697592f8cbc7 *NEWS.md
 435ed92e903635204c5c42342fe2205b *R/stderr.R
 a9846eb39f39b87e998364ba6b1c1e2c *R/summary-impl.R
 5e3336d02dafd68c5b69335d9aea9278 *R/summary_stats.R
@@ -10,7 +10,7 @@ c2499e643d16deb933a8e4bcc6a529a2 *inst/extdata/triple_grouped_mtcars.rds
 7b461cba756e2d8b261d68b74b1ab809 *inst/extdata/ungrouped_iris.rds
 c60e726ce5cfdf9e9983150d88aafc6a *man/summary_stats.Rd
 06800454e9d12cdc87d32c63f6c6608e *tests/testthat.R
-67d7b2c3225740206c8660674143dbc3 *tests/testthat/test_calculations.R
+ad663028b60af114ce41c4761d4e684f *tests/testthat/test_calculations.R
 8346461dfcdc66b30f06cd9bc49862ef *tests/testthat/test_ci.R
 831b19a51f5df8c1dd7b0614bf412193 *tests/testthat/test_s3_default.R
 a01857d67e67fc649db119fad7206cb1 *tests/testthat/test_stderror.R
